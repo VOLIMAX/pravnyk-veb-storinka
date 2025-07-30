@@ -38,7 +38,7 @@ All colors MUST be HSL.
     --ring: 200 95% 65%;
 
     /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, rgba(16, 24, 40, 0.95), rgba(31, 41, 55, 0.9));
+    --gradient-hero: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(200 85% 55%));
 
     --radius: 0.5rem;
