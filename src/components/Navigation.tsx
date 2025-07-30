@@ -18,8 +18,13 @@ const Navigation = () => {
             <div className="bg-accent p-2 rounded-lg">
               <Scale className="h-6 w-6 text-accent-foreground" />
             </div>
-            <div className="text-xl font-bold text-foreground">
-              Юридичні послуги
+            <div className="flex flex-col">
+              <div className="text-xl font-playfair font-semibold text-foreground">
+                Nykyforak Volodymyr
+              </div>
+              <div className="text-sm font-inter text-muted-foreground uppercase tracking-wider">
+                lawyer
+              </div>
             </div>
           </div>
 
