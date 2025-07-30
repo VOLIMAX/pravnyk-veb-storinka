@@ -19,7 +19,7 @@ const Navigation = () => {
               <Scale className="h-6 w-6 text-accent-foreground" />
             </div>
             <div className="flex flex-col">
-              <div className="text-xl font-playfair font-semibold text-foreground">
+              <div className="text-xl font-playfair font-normal text-foreground">
                 Nykyforak Volodymyr
               </div>
               <div className="text-sm font-inter text-muted-foreground uppercase tracking-wider">
