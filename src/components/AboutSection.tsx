@@ -10,7 +10,7 @@ const AboutSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
-                src="/lovable-uploads/759a99e6-4460-4973-b8f5-be1a830b06a0.png"
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 alt="Володимир Никифорак"
                 className="w-full max-w-md mx-auto lg:mx-0 rounded-lg shadow-lg"
               />
