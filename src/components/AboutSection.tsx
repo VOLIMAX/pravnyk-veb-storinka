@@ -7,12 +7,12 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 lg:mr-8">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="Володимир Никифорак"
-                className="w-full max-w-md mx-auto lg:mx-0 rounded-lg shadow-lg"
+                className="w-full max-w-xs mx-auto lg:mx-0 rounded-lg shadow-lg"
               />
             </div>
           </div>

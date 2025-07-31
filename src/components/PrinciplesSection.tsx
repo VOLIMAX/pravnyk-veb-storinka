@@ -45,7 +45,7 @@ const PrinciplesSection = () => {
         </div>
 
         {/* Principles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
           {principles.map((principle, index) => {
             const IconComponent = principle.icon;
             return (
