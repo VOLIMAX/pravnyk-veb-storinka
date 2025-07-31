@@ -17,9 +17,9 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight px-2">
-            Адвокат Олександр Пилип'юк
+            Адвокат Володимир Никикфорак
           </h1>
-          
+
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Кваліфікована юридична допомога, спрямована на забезпечення легкості та спокою у вашому житті.
           </p>
@@ -28,8 +28,8 @@ const HeroSection = () => {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-4 sm:mb-6">
               Консультація безкоштовно
             </h2>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
             >
               ЗАПИСАТИСЯ
@@ -46,15 +46,15 @@ const HeroSection = () => {
               <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
               <span className="font-medium text-center sm:text-left">м. Чернівці, вул. Героїв Майдану, 62</span>
             </div>
-            
+
             <div className="flex items-center justify-center sm:justify-end space-x-2 sm:space-x-3 text-muted-foreground text-sm sm:text-base">
               <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
               <span className="font-medium hidden sm:inline">Безкоштовна консультація</span>
-              <a 
-                href="tel:+380976864633" 
+              <a
+                href="tel:+380505167216"
                 className="text-accent hover:text-accent/80 transition-colors font-semibold text-base sm:text-lg"
               >
-                +38 097 686 46 33
+                +38 050 516 72 16
               </a>
             </div>
           </div>
