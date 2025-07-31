@@ -68,18 +68,15 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={index} 
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 hover:border-accent/20"
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 hover:border-accent/20 overflow-hidden"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative">
                   <img 
                     src={service.image} 
                     alt={service.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 p-2 bg-accent rounded-lg">
-                    <IconComponent className="h-5 w-5 text-accent-foreground" />
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
                 </div>
                 
                 <CardHeader className="pb-3">
