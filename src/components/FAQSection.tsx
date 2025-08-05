@@ -55,14 +55,14 @@ const FAQSection = () => {
         </div>
 
         {/* FAQ Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
           {/* Image */}
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Legal consultation"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg shadow-lg object-cover h-96"
               />
             </div>
           </div>

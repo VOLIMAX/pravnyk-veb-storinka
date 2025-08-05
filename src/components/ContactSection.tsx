@@ -68,9 +68,9 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Contact Form */}
-          <Card className="border-border">
+          <Card className="border-border h-fit">
             <CardHeader>
               <CardTitle className="text-2xl font-playfair font-semibold text-foreground mb-2">
                 Зв'яжіться зі мною
@@ -131,7 +131,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 h-fit">
             <Card className="border-border">
               <CardHeader>
                 <CardTitle className="text-xl font-playfair font-semibold text-foreground">

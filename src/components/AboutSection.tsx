@@ -5,9 +5,9 @@ const AboutSection = () => {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Image */}
-          <div className="order-2 lg:order-1 lg:mr-8">
+          <div className="order-2 lg:order-1 flex justify-end lg:pr-2">
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -18,7 +18,7 @@ const AboutSection = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 lg:pl-2">
             <div className="flex items-center mb-6">
               <div className="h-px bg-border flex-1 max-w-16"></div>
               <div className="mx-6 w-12 h-12 rounded-full border border-border bg-background flex items-center justify-center">

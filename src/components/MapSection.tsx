@@ -1,44 +1,6 @@
-import { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import { MapPin } from 'lucide-react';
 
 const MapSection = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-
-  useEffect(() => {
-    if (!mapContainer.current) return;
-
-    // You would need to set your Mapbox token here
-    // For now, using a placeholder - replace with actual token
-    mapboxgl.accessToken = 'pk.eyJ1IjoibG92YWJsZSIsImEiOiJjbGYydGF6ZGcwMDFyM3BtcGI2NDN4Ym9sIn0.ZdJEcBwJOKJffHp7YKlpkg';
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      center: [25.9358, 48.2922], // Chernivtsi coordinates
-      zoom: 13,
-    });
-
-    // Add marker for the office location
-    new mapboxgl.Marker({
-      color: 'hsl(200, 95%, 65%)', // Using accent color
-      scale: 1.2
-    })
-    .setLngLat([25.9358, 48.2922])
-    .setPopup(
-      new mapboxgl.Popup({ offset: 25 })
-        .setHTML('<div style="color: #000;"><strong>Володимир Никифорак</strong><br/>Юридичні послуги</div>')
-    )
-    .addTo(map.current);
-
-    // Add navigation controls
-    map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-muted/20">
@@ -63,9 +25,15 @@ const MapSection = () => {
           </p>
         </div>
 
-        {/* Map */}
-        <div className="relative w-full h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
-          <div ref={mapContainer} className="absolute inset-0" />
+        {/* Map Placeholder */}
+        <div className="relative w-full h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg bg-muted/50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-8 h-8 text-accent-foreground" />
+            </div>
+            <p className="text-foreground font-medium">м. Чернівці, вул. Центральна 1</p>
+            <p className="text-muted-foreground text-sm mt-2">Інтерактивна карта буде доступна незабаром</p>
+          </div>
         </div>
         
         {/* Address Info */}
