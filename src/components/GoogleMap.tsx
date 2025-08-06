@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { MapPin } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -9,8 +10,8 @@ declare global {
 
 const GoogleMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [apiKey, setApiKey] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const initializeMap = () => {
     if (!mapRef.current || !window.google) return;
@@ -54,52 +55,61 @@ const GoogleMap = () => {
     });
   };
 
-  const loadGoogleMaps = () => {
-    if (!apiKey.trim()) return;
+  const loadGoogleMaps = async () => {
+    try {
+      // Try to get the API key from Supabase Edge Function
+      const response = await fetch('/api/google-maps-key');
+      const { apiKey } = await response.json();
+      
+      if (!apiKey) {
+        throw new Error('No API key found');
+      }
 
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    
-    window.initMap = () => {
-      setIsLoaded(true);
-      initializeMap();
-    };
-    
-    document.head.appendChild(script);
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+      script.async = true;
+      script.defer = true;
+      
+      window.initMap = () => {
+        setIsLoaded(true);
+        setIsLoading(false);
+        initializeMap();
+      };
+      
+      script.onerror = () => {
+        setIsLoading(false);
+      };
+      
+      document.head.appendChild(script);
+    } catch (error) {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
-    if (apiKey && !isLoaded) {
-      loadGoogleMaps();
-    }
-  }, [apiKey, isLoaded]);
+    loadGoogleMaps();
+  }, []);
 
-  if (!apiKey) {
+  if (isLoading) {
     return (
       <div className="relative w-full h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg bg-muted/50 flex items-center justify-center">
-        <div className="text-center max-w-md p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Налаштування Google Maps</h3>
-          <p className="text-muted-foreground mb-4 text-sm">
-            Введіть ваш Google Maps API ключ для відображення карти
-          </p>
-          <input
-            type="text"
-            placeholder="Введіть Google Maps API ключ"
-            value={apiKey}
-            onChange={(e) => setApiKey(e.target.value)}
-            className="w-full p-2 border rounded mb-3 text-sm"
-          />
-          <button
-            onClick={loadGoogleMaps}
-            className="bg-accent text-accent-foreground px-4 py-2 rounded text-sm hover:bg-accent/90"
-          >
-            Завантажити карту
-          </button>
-          <p className="text-xs text-muted-foreground mt-2">
-            Отримати API ключ: <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" className="text-accent">Google Maps Platform</a>
-          </p>
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-accent mx-auto mb-2"></div>
+          <p className="text-muted-foreground">Завантаження карти...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isLoaded) {
+    return (
+      <div className="relative w-full h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg bg-muted/50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
+            <MapPin className="w-8 h-8 text-accent-foreground" />
+          </div>
+          <p className="text-foreground font-medium">м. Чернівці, вул. Центральна 1</p>
+          <p className="text-muted-foreground text-sm mt-2">Карта буде доступна після налаштування</p>
         </div>
       </div>
     );
