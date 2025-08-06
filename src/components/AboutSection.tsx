@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Image */}
-          <div className="order-2 lg:order-1 flex justify-end lg:pr-2">
+          <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:pl-8">
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"

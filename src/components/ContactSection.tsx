@@ -15,14 +15,39 @@ const ContactSection = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Повідомлення надіслано",
-      description: "Дякуємо за звернення! Я зв'яжуся з вами найближчим часом.",
-    });
-    setFormData({ name: "", phone: "", message: "" });
+    
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          message: formData.message,
+          to: 'volodymyr.nykyforak@gmail.com'
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Повідомлення надіслано",
+          description: "Дякуємо за звернення! Я зв'яжуся з вами найближчим часом.",
+        });
+        setFormData({ name: "", phone: "", message: "" });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      toast({
+        title: "Помилка",
+        description: "Не вдалося надіслати повідомлення. Спробуйте ще раз.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

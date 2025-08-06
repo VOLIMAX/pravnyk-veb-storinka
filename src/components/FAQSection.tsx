@@ -55,7 +55,7 @@ const FAQSection = () => {
         </div>
 
         {/* FAQ Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="order-2 lg:order-1">
             <div className="relative">
