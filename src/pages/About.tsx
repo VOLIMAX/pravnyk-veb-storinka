@@ -1,4 +1,7 @@
 import Navigation from "@/components/Navigation";
+import PrinciplesSection from "@/components/PrinciplesSection";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const About = () => {
   return (
@@ -39,6 +42,9 @@ const About = () => {
           </div>
         </div>
       </div>
+      <PrinciplesSection />
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 };
