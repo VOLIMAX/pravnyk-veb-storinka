@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin, Scale } from "lucide-react";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 sm:px-6">
@@ -36,7 +38,11 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/" 
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className={`transition-colors ${
+                    location.pathname === "/" 
+                      ? "text-accent font-medium" 
+                      : "text-muted-foreground hover:text-accent"
+                  }`}
                 >
                   Головна
                 </Link>
@@ -44,26 +50,38 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/about" 
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className={`transition-colors ${
+                    location.pathname === "/about" 
+                      ? "text-accent font-medium" 
+                      : "text-muted-foreground hover:text-accent"
+                  }`}
                 >
                   Про мене
                 </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                <Link 
+                  to="/services" 
+                  className={`transition-colors ${
+                    location.pathname === "/services" 
+                      ? "text-accent font-medium" 
+                      : "text-muted-foreground hover:text-accent"
+                  }`}
                 >
                   Послуги
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#contact" 
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                <Link 
+                  to="/contacts" 
+                  className={`transition-colors ${
+                    location.pathname === "/contacts" 
+                      ? "text-accent font-medium" 
+                      : "text-muted-foreground hover:text-accent"
+                  }`}
                 >
                   Контакти
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
