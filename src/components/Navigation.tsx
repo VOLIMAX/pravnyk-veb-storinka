@@ -24,7 +24,7 @@ const Navigation = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg sm:text-xl font-playfair font-normal text-foreground">
-                Никикфорак Володимир
+                Никифорак Володимир
               </div>
               <div className="text-xs sm:text-sm font-inter text-muted-foreground uppercase tracking-wider">
                 Адвокат
