@@ -1,59 +1,74 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-          {/* Image */}
-          <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:pl-8">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Володимир Никифорак"
-                className="w-full max-w-xs mx-auto lg:mx-0 rounded-lg shadow-lg"
-              />
+    <section className="py-20 lg:py-32 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          {/* Content */}
+          <div className="order-2 lg:order-1 space-y-8">
+            {/* Section Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+              <span className="text-accent font-medium text-sm">Про мене</span>
+            </div>
+
+            <div>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                <span className="gradient-text">Никифорак</span>
+                <br />
+                Володимир
+              </h2>
+
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  <span className="text-foreground font-semibold">Досвідчений адвокат</span>, експерт у різних галузях права. 
+                  За багаторічну практику успішно захистив сотні клієнтів у найскладніших судових справах.
+                </p>
+                
+                <p>
+                  Його професійна експертиза та страстна відданість справі забезпечують 
+                  <span className="text-accent font-semibold"> найвищий рівень правового захисту </span>
+                  для кожного клієнта.
+                </p>
+                
+                <p>
+                  Володію глибоким розумінням судових процедур та правових нюансів, завжди готовий 
+                  взяти на себе відповідальність за справедливість та права своїх клієнтів.
+                </p>
+              </div>
+
+              <div className="pt-8">
+                <Link to="/about">
+                  <Button 
+                    size="lg"
+                    className="bg-gradient-to-r from-accent to-blue-600 hover:from-accent/90 hover:to-blue-600/90 text-white font-semibold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg group"
+                  >
+                    ДЕТАЛЬНІШЕ ПРО МЕНЕ
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2 lg:pl-2">
-            <div className="flex items-center mb-6">
-              <div className="h-px bg-border flex-1 max-w-16"></div>
-              <div className="mx-6 w-12 h-12 rounded-full border border-border bg-background flex items-center justify-center">
-                <div className="w-6 h-6 bg-accent rounded-full"></div>
+          {/* Image */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent to-purple-600 rounded-3xl blur-lg opacity-20"></div>
+              <div className="relative modern-card p-2 bg-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Никифорак Володимир"
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
+                />
               </div>
-              <div className="h-px bg-border flex-1 max-w-16"></div>
             </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-semibold text-foreground mb-6">
-              Про мене
-            </h2>
-
-            <h3 className="text-xl sm:text-2xl font-playfair font-medium text-foreground mb-6">
-              Володимир Никифорак
-            </h3>
-
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Досвідчений адвокат, експерт у різних галузях права. За багаторічну практику 
-              успішно захистив сотні клієнтів у найскладніших судових справах. Його професійна 
-              експертиза та страстна відданість справі забезпечують найвищий рівень 
-              правового захисту для кожного клієнта. Володію глибоким розумінням судових 
-              процедур та правових нюансів, завжди готовий взяти на себе відповідальність 
-              за справедливість та права своїх клієнтів. Незалежно від складності справи, 
-              завжди готовий знайти ефективні рішення та гарантує найвищий стандарт 
-              юридичних послуг для своїх клієнтів.
-            </p>
-
-            <Link to="/about">
-              <Button 
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 text-base transition-all duration-300 transform hover:scale-105"
-              >
-                ДЕТАЛЬНІШЕ
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
