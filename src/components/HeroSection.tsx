@@ -42,7 +42,7 @@ const HeroSection = () => {
               </p>
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-6 py-3 rounded-md subtle-animation"
+                className="bg-yellow-400 hover:bg-yellow-300 text-black font-medium px-6 py-3 rounded-md subtle-animation"
               >
                 ЗАПИСАТИСЯ НА КОНСУЛЬТАЦІЮ
                 <ArrowRight className="ml-2 h-4 w-4" />
