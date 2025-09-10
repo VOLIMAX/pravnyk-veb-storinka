@@ -21,14 +21,14 @@ const HeroSection = () => {
             <span className="text-accent font-medium text-sm">Професійна юридична допомога</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Адвокат <span className="accent-text">Никифорак</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Адвокат <span className="text-yellow-400 font-semibold">Никифорак</span>
             <br />
             <span className="text-3xl sm:text-4xl md:text-5xl">Володимир</span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Кваліфікована юридична допомога з <span className="accent-text">досвідом понад 15 років</span>, 
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Кваліфікована юридична допомога з <span className="text-yellow-400 font-semibold">досвідом понад 15 років</span>, 
             спрямована на захист ваших інтересів та прав
           </p>
 
