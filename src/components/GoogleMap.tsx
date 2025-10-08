@@ -22,16 +22,18 @@ const GoogleMap = () => {
         scrollWheelZoom={false}
         className="w-full h-full"
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={chernivtsiLocation}>
-          <Popup>
-            Володимир Никифорак - Адвокат<br />
-            м. Чернівці, вул. Центральна 1
-          </Popup>
-        </Marker>
+        <>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={chernivtsiLocation}>
+            <Popup>
+              Володимир Никифорак - Адвокат<br />
+              м. Чернівці, вул. Центральна 1
+            </Popup>
+          </Marker>
+        </>
       </MapContainer>
     </div>
   );
