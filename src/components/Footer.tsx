@@ -22,12 +22,20 @@ const Footer = () => {
               у сфері цивільного, сімейного, трудового та адміністративного права.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors cursor-pointer">
+              <a 
+                href="tel:+380505167216"
+                className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors cursor-pointer"
+                aria-label="Зателефонувати"
+              >
                 <Phone className="w-5 h-5 text-accent" />
-              </div>
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors cursor-pointer">
+              </a>
+              <a 
+                href="mailto:volodymyr.lawyer@email.com"
+                className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors cursor-pointer"
+                aria-label="Написати email"
+              >
                 <Mail className="w-5 h-5 text-accent" />
-              </div>
+              </a>
             </div>
           </div>
 
