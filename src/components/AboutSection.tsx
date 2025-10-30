@@ -62,7 +62,7 @@ const AboutSection = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent to-purple-600 rounded-3xl blur-lg opacity-20"></div>
-              <div className="relative modern-card p-2 bg-white">
+              <div className="relative">
                 <img 
                   src={heroPicture}
                   alt="Никифорак Володимир"
