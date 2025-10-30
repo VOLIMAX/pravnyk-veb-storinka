@@ -31,24 +31,6 @@ const HeroSection = () => {
             Кваліфікована юридична допомога з <span className="text-yellow-400 font-semibold">досвідом понад 15 років</span>, 
             спрямована на захист ваших інтересів та прав
           </p>
-
-          <div className="mb-12">
-            <div className="professional-glass inline-block rounded-lg p-6 mb-8 max-w-md">
-              <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-3">
-                Безкоштовна консультація
-              </h2>
-              <p className="text-muted-foreground mb-4 text-base">
-                Професійна оцінка вашої правової ситуації
-              </p>
-              <Button
-                size="lg"
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-medium px-6 py-3 rounded-md subtle-animation"
-              >
-                ЗАПИСАТИСЯ НА КОНСУЛЬТАЦІЮ
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
 
