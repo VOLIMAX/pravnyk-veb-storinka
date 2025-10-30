@@ -55,7 +55,7 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const phoneNumber = "+380501234567";
+  const phoneNumber = "+380505167216";
 
   const handlePhoneCall = () => {
     window.open(`tel:${phoneNumber}`, '_self');
@@ -66,7 +66,7 @@ const ContactSection = () => {
   };
 
   const handleTelegram = () => {
-    window.open(`https://t.me/+380501234567`, '_blank');
+    window.open(`https://t.me/${phoneNumber}`, '_blank');
   };
 
   const handleWhatsApp = () => {
