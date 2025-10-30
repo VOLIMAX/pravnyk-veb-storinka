@@ -63,7 +63,7 @@ const AboutSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent to-purple-600 rounded-3xl blur-lg opacity-20"></div>
               <div className="relative modern-card p-2 bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  src="/src/assets/hero-picture"
                   alt="Никифорак Володимир"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
                 />

@@ -93,14 +93,14 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-muted-foreground">+380 50 123 45 67</p>
+                  <p className="text-muted-foreground">+380 50 516 72 16</p>
                   <p className="text-sm text-muted-foreground/80">Пн-Пт: 9:00 - 18:00</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <p className="text-muted-foreground">volodymyr.lawyer@email.com</p>
+                <p className="text-muted-foreground">volodymyr.lawyer@email.com</p> <!-- TODO MAX -->
               </div>
               
               <div className="flex items-start space-x-3">
