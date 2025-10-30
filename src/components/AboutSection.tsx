@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import heroPicture from "@/assets/hero-picture.jpg";
 
 const AboutSection = () => {
   return (
@@ -63,7 +64,7 @@ const AboutSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent to-purple-600 rounded-3xl blur-lg opacity-20"></div>
               <div className="relative modern-card p-2 bg-white">
                 <img 
-                  src="/src/assets/hero-picture"
+                  src={heroPicture}
                   alt="Никифорак Володимир"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
                 />
