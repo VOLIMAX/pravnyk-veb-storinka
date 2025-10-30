@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import PrinciplesSection from "@/components/PrinciplesSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import heroPicture from "@/assets/hero-picture.jpg";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="/lovable-uploads/759a99e6-4460-4973-b8f5-be1a830b06a0.png"
+                  src={heroPicture}
                   alt="Володимир Никифорак"
                   className="w-full rounded-lg shadow-lg"
                 />
