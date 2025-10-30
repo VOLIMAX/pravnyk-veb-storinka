@@ -100,7 +100,7 @@ const Footer = () => {
               
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <p className="text-muted-foreground">volodymyr.lawyer@email.com</p> <!-- TODO MAX -->
+                <p className="text-muted-foreground">volodymyr.lawyer@email.com</p>
               </div>
               
               <div className="flex items-start space-x-3">
